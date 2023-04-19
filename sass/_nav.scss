@@ -1,0 +1,72 @@
+.nav {
+    position: relative;
+    background-color: $second;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-menu {
+    display: block;
+    background-color: $first;
+    color: $light;
+    width: 40px;
+    height: 40px;
+    line-height: 44px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 4px;
+}
+.menu {
+    position: absolute;
+    top: 82px;
+    left: 12px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $second;
+    width: 40%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: height .5s linear;
+}
+.menu__link {
+    color: $light;
+    padding: 8px 12px;
+}
+.menu__link:hover {
+    background-color: $first;
+    border-radius: 4px;
+}
+.show {
+    height: 162px;
+}
+.social [class*="icon-"] {
+    background-color: $first;
+    color: $light;
+    font-size: 18px;
+    margin-left: 12px;
+    padding: 8px 12px;
+    border: 2px solid;
+    border-radius: 24px;
+}
+
+@media (min-width: 768px) {
+    .icon-menu {
+        display: none;
+    }
+    .menu {
+        position: static;
+        flex-direction: row;
+        background: none;
+        width: auto;
+        height: auto;
+    }
+}
